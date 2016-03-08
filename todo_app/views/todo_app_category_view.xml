@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+        <record model="ir.ui.view" id="todo_app_category_form">
+            <field name="name">todo.app.category.form</field>
+            <field name="model">todo.app.category</field>
+            <field name="arch" type="xml">
+                <form string="Todo Category">
+                    <sheet>
+                    <h1>
+                        <label string="Category"/>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+                    <group>
+                        <field name="todo_ids" nolabel="1"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+        <record model="ir.ui.view" id="todo_app_category_tree">
+            <field name="name">todo.app.category.tree</field>
+            <field name="model">todo.app.category</field>
+            <field name="arch" type="xml">
+                <tree string="Todo Category List">
+                    <field name="name"/>
+                    <!-- <field name="todo_ids" widget="x2many_counter" string="categories"/>
+                    -->
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_todo_app_category_tree">
+            <field name="name">Todo Categories</field>
+            <field name="res_model">todo.app.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field ref="todo_app_category_tree" name="view_id"/>
+            <!-- <field name="search_view_id" ref="view_better_zip_filter"/> -->
+        </record>
+            
+        <menuitem
+            name="Config"
+            id="todo_app_category"
+            parent="todo_app_main"
+        />
+        
+        <menuitem
+            id="todo_app_category_list"
+            parent="todo_app_category"
+            action="action_todo_app_category_tree"
+            />
+        
+    </data>
+</openerp>
