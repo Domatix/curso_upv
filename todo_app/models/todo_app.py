@@ -13,3 +13,10 @@ class TodoApp(models.Model):
         string="Description")
     date = fields.Date(
         string="Date")
+    # tipo normal, urgente...
+    type = fields.Selection(
+        [('normal','Normal'),
+         ('prior','Prior')],
+        string="Type")
+    # etiquetas m2m
+    # revisiones o2m 
