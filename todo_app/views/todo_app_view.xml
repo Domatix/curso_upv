@@ -22,16 +22,18 @@
                     </group>
                     <group string="Revs">
                         <field name="rev_ids" nolabel="1">
-                            <tree>
+                            <tree editable="top">
                                 <field name="name"/>
                                 <field name="user_id"/>
                             </tree>
+                            <!--
                             <form>
                                 <group>
                                     <field name="name"/>
                                     <field name="user_id"/> 
                                 </group>
                             </form>
+                            -->
                         </field>
                     </group>
                     </sheet>
@@ -51,13 +53,30 @@
             </field>
         </record>
         
+        
+        <record model="ir.ui.view" id="todo_app_search">
+            <field name="name">todo.app.search</field>
+            <field name="model">todo.app</field>
+            <field name="arch" type="xml">
+                <search string="Search Todo">
+                    <field name="name" />
+                    <field name="description" />
+                    <separator/>
+                    <filter domain="[('type','=','normal')]" help="Type normal"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Type" context="{'group_by':'type'}"/>
+                    </group>
+               </search>
+            </field>
+        </record>
+        
         <record model="ir.actions.act_window" id="action_todo_app_tree">
             <field name="name">Show Todo List</field>
             <field name="res_model">todo.app</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field ref="todo_app_tree" name="view_id"/>
-            <!-- <field name="search_view_id" ref="view_better_zip_filter"/> -->
+            <field name="search_view_id" ref="todo_app_search"/>
         </record>
 
         <menuitem

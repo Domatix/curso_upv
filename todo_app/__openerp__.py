@@ -25,6 +25,7 @@
     # always loaded
     'data': [
         'views/todo_app_view.xml',
+        'views/todo_app_category_view.xml',
         # 'security/ir.model.access.csv',
         # 'templates.xml',
     ],
