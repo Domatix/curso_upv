@@ -14,10 +14,14 @@
                     </h1>
                     <group>
                         <field name="date"/>
-                        <field name="category_ids"/>
+                        <field name="type"/>
+                        <field name="category_ids" widget="many2many_checkboxes"/>
                     </group>
                     <group string="Description">
                         <field name="description" nolabel="1"/>
+                    </group>
+                    <group string="Revs">
+                        <field name="rev_ids" nolabel="1"/>
                     </group>
                     </sheet>
                 </form>

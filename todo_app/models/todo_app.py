@@ -10,7 +10,7 @@ class TodoAppCategory(models.Model):
         required=True,
         translate=True)
     todo_ids = fields.Many2many(
-        comodel_name='todo.app.category',
+        comodel_name='todo.app',
         relation='todo_app_category_rel',
         column1='categ_id',
         column2='todo_id',
@@ -24,6 +24,13 @@ class TodoAppRev(models.Model):
         string="Tittle",
         required=True,
         translate=True)
+    todo_id = fields.Many2one(
+        comodel_name='todo.app',
+        string='Todo')
+    user_id = fields.Many2one(
+        comodel_name='res.users',
+        string='User')
+    
 
 class TodoApp(models.Model):
     _name = 'todo.app'
@@ -50,4 +57,8 @@ class TodoApp(models.Model):
         column1='todo_id',
         column2='categ_id',
         string='Categories')
-    # revisiones o2m 
+    # revisiones o2m
+    rev_ids = fields.One2many(
+        comodel_name='todo.app.rev',
+        inverse_name='todo_id',
+        string='Revs')
