@@ -61,6 +61,7 @@
                 <search string="Search Todo">
                     <field name="name" />
                     <field name="description" />
+                    <field name="type" />
                     <separator/>
                     <filter domain="[('type','=','normal')]" help="Type normal"/>
                     <group expand="0" string="Group By">
@@ -78,6 +79,25 @@
             <field ref="todo_app_tree" name="view_id"/>
             <field name="search_view_id" ref="todo_app_search"/>
         </record>
+        
+        <record model="ir.actions.act_window" id="action_todo_app_normal_tree">
+            <field name="name">Show Todo Normal List</field>
+            <field name="res_model">todo.app</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field ref="todo_app_tree" name="view_id"/>
+            <field name="search_view_id" ref="todo_app_search"/>
+            <field name="domain">[('type','=','normal')]</field>
+        </record>
+        <record model="ir.actions.act_window" id="action_todo_app_prior_tree">
+            <field name="name">Show Todo Normal Prior</field>
+            <field name="res_model">todo.app</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field ref="todo_app_tree" name="view_id"/>
+            <field name="search_view_id" ref="todo_app_search"/>
+            <field name="context">{'search_default_type':'prior'}</field>
+        </record>
 
         <menuitem
             name="Todo App"
@@ -94,6 +114,18 @@
             id="todo_app_list"
             parent="todo_app"
             action="action_todo_app_tree"
+            />
+            
+        <menuitem
+            id="todo_app_list_normal"
+            parent="todo_app"
+            action="action_todo_app_normal_tree"
+            />
+            
+        <menuitem
+            id="todo_app_list_prior"
+            parent="todo_app"
+            action="action_todo_app_prior_tree"
             />
         
     </data>
