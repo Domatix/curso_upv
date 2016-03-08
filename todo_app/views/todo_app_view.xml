@@ -21,7 +21,18 @@
                         <field name="description" nolabel="1"/>
                     </group>
                     <group string="Revs">
-                        <field name="rev_ids" nolabel="1"/>
+                        <field name="rev_ids" nolabel="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="user_id"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="user_id"/> 
+                                </group>
+                            </form>
+                        </field>
                     </group>
                     </sheet>
                 </form>
