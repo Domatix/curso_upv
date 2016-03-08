@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+        <record model="ir.ui.view" id="todo_app_form">
+            <field name="name">todo.app.form</field>
+            <field name="model">todo.app</field>
+            <field name="arch" type="xml">
+                <form string="Todo">
+                    <sheet>
+                    <h1>
+                        <label string="Todo "/>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+                    <group>
+                        <field name="date"/>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+        <record model="ir.ui.view" id="todo_app_tree">
+            <field name="name">todo.app.tree</field>
+            <field name="model">todo.app</field>
+            <field name="arch" type="xml">
+                <tree string="Todo List">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="action_todo_app_tree">
+            <field name="name">Show Todo List</field>
+            <field name="res_model">todo.app</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field ref="todo_app_tree" name="view_id"/>
+            <!-- <field name="search_view_id" ref="view_better_zip_filter"/> -->
+        </record>
+
+        <menuitem
+            name="Todo App"
+            id="todo_app_main"
+            />
+            
+        <menuitem
+            name="Todo App"
+            id="todo_app"
+            parent="todo_app_main"
+        />
+        
+        <menuitem
+            id="todo_app_list"
+            parent="todo_app"
+            action="action_todo_app_tree"
+            />
+        
+    </data>
+</openerp>
