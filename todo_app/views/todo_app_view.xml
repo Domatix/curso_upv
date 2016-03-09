@@ -23,7 +23,7 @@
                         <button
                             name="%(action_todo_set_done)d"
                             type="action"
-                            class="oe_inline oe_link oe_edit_only"
+                            class="oe_highlight"
                             string="Done"
                             states="todo"/>
                         
