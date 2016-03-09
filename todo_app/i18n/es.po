@@ -1,0 +1,239 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* todo_app
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-09 17:33+0000\n"
+"PO-Revision-Date: 2016-03-09 17:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: todo_app
+#: view:todo.set.done:todo_app.todo_set_done_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: todo_app
+#: field:todo.app,category_ids:0
+#: field:todo.app.category,todo_ids:0
+msgid "Categories"
+msgstr "Categorías"
+
+#. module: todo_app
+#: view:todo.app.category:todo_app.todo_app_category_form
+msgid "Category"
+msgstr "Categoría"
+
+#. module: todo_app
+#: model:ir.ui.menu,name:todo_app.todo_app_category
+msgid "Config"
+msgstr "Configuración"
+
+#. module: todo_app
+#: field:todo.app,create_uid:0
+#: field:todo.app.category,create_uid:0
+#: field:todo.app.rev,create_uid:0
+#: field:todo.set.done,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: todo_app
+#: field:todo.app,create_date:0
+#: field:todo.app.category,create_date:0
+#: field:todo.app.rev,create_date:0
+#: field:todo.set.done,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: todo_app
+#: field:todo.app,date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_form
+#: field:todo.app,description:0
+msgid "Description"
+msgstr "Descrición"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_form
+#: selection:todo.app,state:0
+#: view:todo.set.done:todo_app.todo_set_done_form
+msgid "Done"
+msgstr "Hecho"
+
+#. module: todo_app
+#: selection:todo.app,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_search
+msgid "Group By"
+msgstr "Group By"
+
+#. module: todo_app
+#: field:todo.app,id:0
+#: field:todo.app.category,id:0
+#: field:todo.app.rev,id:0
+#: field:todo.set.done,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: todo_app
+#: field:todo.app,write_uid:0
+#: field:todo.app.category,write_uid:0
+#: field:todo.app.rev,write_uid:0
+#: field:todo.set.done,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: todo_app
+#: field:todo.app,write_date:0
+#: field:todo.app.category,write_date:0
+#: field:todo.app.rev,write_date:0
+#: field:todo.set.done,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: todo_app
+#: field:todo.app.category,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: todo_app
+#: selection:todo.app,type:0
+msgid "Normal"
+msgstr "Normal"
+
+#. module: todo_app
+#: selection:todo.app,type:0
+msgid "Prior"
+msgstr "Prioritario"
+
+#. module: todo_app
+#: field:todo.set.done,name:0
+msgid "Revisión"
+msgstr "Rev"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_form
+#: field:todo.app,rev_ids:0
+msgid "Revs"
+msgstr "Revisiones"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_search
+msgid "Search Todo"
+msgstr "Buscar Todo"
+
+#. module: todo_app
+#: model:ir.actions.act_window,name:todo_app.action_todo_set_done
+msgid "Set Done"
+msgstr "Realizar"
+
+#. module: todo_app
+#: model:ir.actions.act_window,name:todo_app.action_todo_app_tree
+#: model:ir.ui.menu,name:todo_app.todo_app_list
+msgid "Show Todo List"
+msgstr "Mostrar todo"
+
+#. module: todo_app
+#: model:ir.actions.act_window,name:todo_app.action_todo_app_normal_tree
+#: model:ir.ui.menu,name:todo_app.todo_app_list_normal
+msgid "Show Todo Normal List"
+msgstr "Mostrar todo normales"
+
+#. module: todo_app
+#: model:ir.actions.act_window,name:todo_app.action_todo_app_prior_tree
+#: model:ir.ui.menu,name:todo_app.todo_app_list_prior
+msgid "Show Todo Normal Prior"
+msgstr "Mostrar todo prioritario"
+
+#. module: todo_app
+#: field:todo.app,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: todo_app
+#: field:todo.app,name:0
+#: field:todo.app.rev,name:0
+msgid "Tittle"
+msgstr "Titulo"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_form
+#: selection:todo.app,state:0
+#: field:todo.app.rev,todo_id:0
+#: field:todo.set.done,todo_id:0
+msgid "Todo"
+msgstr "Todo"
+
+#. module: todo_app
+#: model:ir.ui.menu,name:todo_app.todo_app
+#: model:ir.ui.menu,name:todo_app.todo_app_main
+msgid "Todo App"
+msgstr "Todo App"
+
+#. module: todo_app
+#: model:ir.actions.act_window,name:todo_app.action_todo_app_category_tree
+#: model:ir.ui.menu,name:todo_app.todo_app_category_list
+msgid "Todo Categories"
+msgstr "Todo Categorías"
+
+#. module: todo_app
+#: view:todo.app.category:todo_app.todo_app_category_form
+msgid "Todo Category"
+msgstr "Todo Categoría"
+
+#. module: todo_app
+#: view:todo.app.category:todo_app.todo_app_category_tree
+msgid "Todo Category List"
+msgstr "Todo Categorías"
+
+#. module: todo_app
+#: view:todo.set.done:todo_app.todo_set_done_form
+msgid "Todo Done"
+msgstr "Realizar todo"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_tree
+msgid "Todo List"
+msgstr "Todo Lista"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_search
+#: field:todo.app,type:0
+msgid "Type"
+msgstr "Tipo"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_search
+msgid "Type normal"
+msgstr "Tipo normal"
+
+#. module: todo_app
+#: field:todo.app.rev,user_id:0
+#: field:todo.set.done,user_id:0
+msgid "User"
+msgstr "Usuario"
+
+#. module: todo_app
+#: code:addons/todo_app/models/todo_app.py:79
+#, python-format
+msgid "You can not set todo without description"
+msgstr "No se puede marcar por realizar un todo sin descripción"
+
+#. module: todo_app
+#: view:todo.set.done:todo_app.todo_set_done_form
+msgid "or"
+msgstr "or"
+
