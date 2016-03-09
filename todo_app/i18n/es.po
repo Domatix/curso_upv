@@ -170,10 +170,18 @@ msgid "Tittle"
 msgstr "Titulo"
 
 #. module: todo_app
-#: view:todo.app:todo_app.todo_app_form
 #: selection:todo.app,state:0
+msgid "Todo"
+msgstr "Realizado"
+
+#. module: todo_app
 #: field:todo.app.rev,todo_id:0
 #: field:todo.set.done,todo_id:0
+msgid "Todo"
+msgstr "Todo"
+
+#. module: todo_app
+#: view:todo.app:todo_app.todo_app_form
 msgid "Todo"
 msgstr "Todo"
 

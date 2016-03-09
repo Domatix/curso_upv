@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+    <!-- Añadir partner_id a vista de todo form y tree -->
+    
+    <!-- Añadir todo_ids a vista de partner -->
+        
+    </data>
+</openerp>
