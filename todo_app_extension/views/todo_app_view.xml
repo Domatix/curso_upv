@@ -3,7 +3,16 @@
     <data>
 
     <!-- Añadir partner_id a vista de todo form y tree -->
-    
+            <record model="ir.ui.view" id="todo_app_extension_form">
+            <field name="name">todo.app.extension.form</field>
+            <field name="model">todo.app</field>
+            <field name="inherit_id" ref="todo_app.todo_app_form"/>
+            <field name="arch" type="xml">
+                <field name="date" position="before">
+                    <field name="partner_id"/>
+                </field>
+            </field>
+            </record>
     <!-- Añadir todo_ids a vista de partner -->
         
     </data>
