@@ -13,11 +13,19 @@
                             type="object"
                             states="draft"
                             class="oe_highlight"/>
+                        <!--
                         <button name="set_done_state" 
                             string="Done"
                             type="object"
                             states="todo"
                             class="oe_highlight"/>
+                        -->
+                        <button
+                            name="%(action_todo_set_done)d"
+                            type="action"
+                            class="oe_inline oe_link oe_edit_only"
+                            string="Done"
+                            states="todo"/>
                         
                         <field name="state" 
                             widget="statusbar"

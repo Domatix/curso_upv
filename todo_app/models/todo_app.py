@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from openerp import models, fields, api
+from openerp.exceptions import Warning
 
 class TodoAppCategory(models.Model):
     _name = 'todo.app.category'
@@ -72,6 +73,10 @@ class TodoApp(models.Model):
     
     @api.one
     def set_todo_state(self):
+        if self.description == False:
+            # from openerp.exceptions import Warning
+            raise Warning(
+                "You can not set todo without description")
         self.write({'state': 'todo'})
     
     @api.one

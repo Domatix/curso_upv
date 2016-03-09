@@ -26,6 +26,7 @@
     'data': [
         'views/todo_app_view.xml',
         'views/todo_app_category_view.xml',
+        'wizards/set_todo_done_view.xml',
         # 'security/ir.model.access.csv',
         # 'templates.xml',
     ],
