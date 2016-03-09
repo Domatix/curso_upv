@@ -62,3 +62,10 @@ class TodoApp(models.Model):
         comodel_name='todo.app.rev',
         inverse_name='todo_id',
         string='Revs')
+    state = fields.Selection(
+        [('draft','Draft'),
+         ('todo','Todo'),
+         ('done','Done')],
+        string="State",
+        default="draft",
+        required=True)

@@ -7,6 +7,12 @@
             <field name="model">todo.app</field>
             <field name="arch" type="xml">
                 <form string="Todo">
+                    <header>
+                        <field name="state" 
+                            widget="statusbar"
+                            statusbar_visible="todo,done"
+                            statusbar_colors='{"draft":"grey","todo":"blue","done":"green"}'/>
+                    </header>
                     <sheet>
                     <h1>
                         <label string="Todo "/>
