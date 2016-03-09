@@ -8,6 +8,17 @@
             <field name="arch" type="xml">
                 <form string="Todo">
                     <header>
+                        <button name="set_todo_state" 
+                            string="Todo"
+                            type="object"
+                            states="draft"
+                            class="oe_highlight"/>
+                        <button name="set_done_state" 
+                            string="Done"
+                            type="object"
+                            states="todo"
+                            class="oe_highlight"/>
+                        
                         <field name="state" 
                             widget="statusbar"
                             statusbar_visible="todo,done"

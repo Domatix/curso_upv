@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from openerp import models, fields
+from openerp import models, fields, api
 
 class TodoAppCategory(models.Model):
     _name = 'todo.app.category'
@@ -69,3 +69,11 @@ class TodoApp(models.Model):
         string="State",
         default="draft",
         required=True)
+    
+    @api.one
+    def set_todo_state(self):
+        self.write({'state': 'todo'})
+    
+    @api.one
+    def set_done_state(self):
+        self.write({'state': 'done'})
