@@ -9,7 +9,7 @@
                 <form string="Todo Done">
                     <group>
                         <field name="name" />
-                        <field name="todo_id" />
+                        <field name="todo_id" invisible="1"/>
                         <field name="user_id" />
                     </group>
                     <footer>
