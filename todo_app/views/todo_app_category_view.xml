@@ -44,12 +44,14 @@
         <menuitem
             name="Config"
             id="todo_app_category"
+            groups="todo_app.group_todo_app"
             parent="todo_app_main"
         />
         
         <menuitem
             id="todo_app_category_list"
             parent="todo_app_category"
+            groups="todo_app.group_todo_app"
             action="action_todo_app_category_tree"
             />
         

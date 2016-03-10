@@ -127,29 +127,34 @@
         <menuitem
             name="Todo App"
             id="todo_app_main"
+            groups="todo_app.group_todo_app_user"
             />
             
         <menuitem
             name="Todo App"
             id="todo_app"
             parent="todo_app_main"
+            groups="todo_app.group_todo_app_user"
         />
         
         <menuitem
             id="todo_app_list"
             parent="todo_app"
+            groups="todo_app.group_todo_app_user"
             action="action_todo_app_tree"
             />
             
         <menuitem
             id="todo_app_list_normal"
             parent="todo_app"
+            groups="todo_app.group_todo_app"
             action="action_todo_app_normal_tree"
             />
             
         <menuitem
             id="todo_app_list_prior"
             parent="todo_app"
+            groups="todo_app.group_todo_app"
             action="action_todo_app_prior_tree"
             />
         

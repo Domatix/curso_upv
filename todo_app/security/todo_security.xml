@@ -2,8 +2,13 @@
 <openerp>
 <data>
 
+    <record id="group_todo_app_user" model="res.groups">
+        <field name="name">Todo App User</field>
+    </record>
+    
     <record id="group_todo_app" model="res.groups">
         <field name="name">Todo App Manager</field>
+        <field name="implied_ids" eval="[(4, ref('todo_app.group_todo_app_user'))]"/>
     </record>
     
 </data>
