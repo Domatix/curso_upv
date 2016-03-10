@@ -3,7 +3,7 @@
     <data>
 
     <!-- Añadir partner_id a vista de todo form y tree -->
-            <record model="ir.ui.view" id="todo_app_extension_form">
+        <record model="ir.ui.view" id="todo_app_extension_form">
             <field name="name">todo.app.extension.form</field>
             <field name="model">todo.app</field>
             <field name="inherit_id" ref="todo_app.todo_app_form"/>
@@ -12,9 +12,9 @@
                     <field name="partner_id"/>
                 </field>
             </field>
-            </record>
+        </record>
             
-            <record model="ir.ui.view" id="todo_app_extension_tree">
+        <record model="ir.ui.view" id="todo_app_extension_tree">
             <field name="name">todo.app.extension.tree</field>
             <field name="model">todo.app</field>
             <field name="inherit_id" ref="todo_app.todo_app_tree"/>
@@ -23,8 +23,25 @@
                     <field name="partner_id"/>
                 </field>
             </field>
-            </record>
+        </record>
+        
+        
     <!-- Añadir todo_ids a vista de partner -->
+        <record model="ir.ui.view" id="todo_app_partner_form">
+            <field name="name">todo.app.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Todo List">
+                        <field name="todo_ids"/>
+                    </page>
+                </notebook>
+                <!--
+                <page name="sales_purchases" position="after"></page>
+                -->
+            </field>
+        </record>
         
     </data>
 </openerp>
