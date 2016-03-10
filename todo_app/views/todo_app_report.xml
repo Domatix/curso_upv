@@ -8,6 +8,18 @@
                 <t t-foreach="docs" t-as="o">
                     <t t-call="report.external_layout">
                         <div class="page">
+                            <h1 t-field="o.name"/>
+                            <p t-field="o.date"/>
+                            <div t-if="o.category_ids">
+                                <span><strong>Categories:</strong></span>
+                                <ul>
+                                    <t t-foreach="o.category_ids" t-as="c">
+                                        <li>
+                                            <p t-field="c.name"/>
+                                        </li>
+                                    </t>
+                                </ul>
+                            </div>
                         </div>
                     </t>
                 </t>
