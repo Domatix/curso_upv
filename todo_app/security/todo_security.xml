@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="group_todo_app" model="res.groups">
+        <field name="name">Todo App Manager</field>
+    </record>
+    
+</data>
+</openerp>
