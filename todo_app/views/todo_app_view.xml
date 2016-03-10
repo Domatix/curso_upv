@@ -45,8 +45,8 @@
                     <group string="Description">
                         <field name="description" nolabel="1"/>
                     </group>
-                    <group string="Revs">
-                        <field name="rev_ids" nolabel="1">
+                    <group string="Revs" groups="todo_app.group_todo_app">
+                        <field name="rev_ids" nolabel="1" groups="todo_app.group_todo_app">
                             <tree editable="top">
                                 <field name="name"/>
                                 <field name="user_id"/>
