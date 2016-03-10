@@ -34,7 +34,21 @@
             <field name="arch" type="xml">
                 <notebook position="inside">
                     <page string="Todo List">
-                        <field name="todo_ids"/>
+                        <field name="todo_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="date"/>
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                    <field name="date"/>
+                                </group>
+                                
+                            </form>
+                        </field>
                     </page>
                 </notebook>
                 <!--
