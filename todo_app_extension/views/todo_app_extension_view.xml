@@ -13,6 +13,17 @@
                 </field>
             </field>
             </record>
+            
+            <record model="ir.ui.view" id="todo_app_extension_tree">
+            <field name="name">todo.app.extension.tree</field>
+            <field name="model">todo.app</field>
+            <field name="inherit_id" ref="todo_app.todo_app_tree"/>
+            <field name="arch" type="xml">
+                <field name="date" position="before">
+                    <field name="partner_id"/>
+                </field>
+            </field>
+            </record>
     <!-- Añadir todo_ids a vista de partner -->
         
     </data>
