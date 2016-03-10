@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        
+        <template id="report_todo_app">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="report.external_layout">
+                        <div class="page">
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        
+        <!-- ir.actions.report.xml -->
+        <report 
+            string="Todo Report" 
+            id="action_report_todo_app" 
+            model="todo.app" 
+            report_type="qweb-pdf"
+            name="todo_app.report_todo_app" 
+        />
+        
+    </data>
+</openerp>
