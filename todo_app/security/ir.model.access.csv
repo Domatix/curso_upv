@@ -1,2 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_todo_app_todo_app,todo_app.todo_app,model_todo_app_todo_app,,1,0,0,0
+access_todo_app,todo_app.todo_app,model_todo_app,,1,1,0,0
+access_todo_app_category,todo_app.todo_app_category,model_todo_app_category,,1,0,0,0
+access_todo_app_rev,todo_app.todo_app_rev,model_todo_app_rev,,1,0,0,0
+access_todo_app,todo_app.todo_app,model_todo_app,todo_app.group_todo_app,1,1,1,1
+access_todo_app_category,todo_app.todo_app_category,model_todo_app_category,todo_app.group_todo_app,1,1,1,1
+access_todo_app_rev,todo_app.todo_app_rev,model_todo_app_rev,todo_app.group_todo_app,1,1,1,1
