@@ -8,17 +8,46 @@
                 <t t-foreach="docs" t-as="o">
                     <t t-call="report.external_layout">
                         <div class="page">
-                            <h1 t-field="o.name"/>
-                            <p t-field="o.date"/>
+                            <h1>Todo: <span t-field="o.name"/></h1>
+                            
+                            <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th><strong>Partner</strong></th>
+                                    <th><strong>Date</strong></th>
+                                    <th><strong>Type</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.partner_id"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.date"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.type"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            </table>
                             <div t-if="o.category_ids">
-                                <span><strong>Categories:</strong></span>
-                                <ul>
-                                    <t t-foreach="o.category_ids" t-as="c">
-                                        <li>
-                                            <p t-field="c.name"/>
-                                        </li>
-                                    </t>
-                                </ul>
+                                <h2><strong>Categories:</strong></h2>
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th><strong>Name</strong></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="o.category_ids" t-as="c">
+                                            <td>
+                                                <span t-field="c.name"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </t>
