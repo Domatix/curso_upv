@@ -3,9 +3,7 @@
     <data>
         
         
-        <template id="report_todo_app">
-            <t t-call="report.html_container">
-                <t t-foreach="docs" t-as="o">
+        <template id="report_todo_app_document">
                     <t t-call="report.external_layout">
                         <div class="page">
                             <h1>Todo: <span t-field="o.name"/></h1>
@@ -52,10 +50,15 @@
                             </div>
                         </div>
                     </t>
+        </template>
+        
+        <template id="report_todo_app">
+            <t t-call="report.html_container">
+                <t t-foreach="doc_ids" t-as="doc_id">
+                    <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'todo_app.report_todo_app_document')"/>
                 </t>
             </t>
         </template>
-        
         <!-- ir.actions.report.xml -->
         <report 
             string="Todo Report" 
