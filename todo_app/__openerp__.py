@@ -29,8 +29,7 @@
         'wizards/set_todo_done_view.xml',
         'views/todo_app_view.xml',
         'views/todo_app_category_view.xml',
-        # 'security/ir.model.access.csv',
-        # 'templates.xml',
+        'views/todo_app_report.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
